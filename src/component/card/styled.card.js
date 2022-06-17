@@ -3,9 +3,18 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
   width: 250px;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px;
   border: 2px solid green;
   border-radius: 3%;
+  @media (min-width: 550px) {
+    flex-basis: 50%;
+  }
+  @media (min-width: 800px) {
+    flex-basis: 30%;
+  }
+  @media (min-width: 1100px) {
+    flex-basis: 20%;
+  }
 `;
 
 export const ImgContainer = styled.img`

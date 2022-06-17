@@ -8,4 +8,8 @@ export const StyledButton = styled.button`
   border-radius: 8px;
   border: none;
   margin: 5px;
+  &:hover {
+    background: #a3edba;
+    cursor: pointer;
+  }
 `;
