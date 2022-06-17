@@ -1,10 +1,10 @@
 import { ButtonContainer, StyledButton } from "./styled.button";
 
-const ComponentButton = ({ next, onclick, page }) => {
+const ComponentButton = ({ next, onclick }) => {
   return (
     <ButtonContainer>
       <StyledButton onClick={onclick}>
-        {next ? `Next Page` : `Preview Page`}
+        {next ? "Next Page" : "Preview Page"}
       </StyledButton>
     </ButtonContainer>
   );
