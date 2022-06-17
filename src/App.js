@@ -7,7 +7,9 @@ import { getAllCharacters } from "./queries";
 import Card from "./component/card";
 
 function App() {
-  const { loading, error, data } = useQuery(getAllCharacters);
+  const { loading, error, data } = useQuery(getAllCharacters, {
+    variables: { page: 3 },
+  });
 
   if (loading) return <p>Loading..</p>;
   if (error) return <p>Error {error.message}</p>;
