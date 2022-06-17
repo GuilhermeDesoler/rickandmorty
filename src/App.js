@@ -8,12 +8,18 @@ import { getAllCharacters } from "./queries";
 
 import Card from "./component/card";
 import PagesButton from "./component/button";
+import ComponentInput from "./component/input";
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [nameSearch, setNameSearch] = useState("");
+  const [statusSearch, setStatusSearch] = useState("");
 
   const { loading, error, data } = useQuery(getAllCharacters, {
-    variables: { page: currentPage, filter: { name: "", status: "" } },
+    variables: {
+      page: currentPage,
+      filter: { name: nameSearch, status: statusSearch },
+    },
   });
 
   if (loading) return <p>Loading..</p>;
@@ -21,6 +27,17 @@ function App() {
 
   return (
     <div className="App">
+      <ComponentInput
+        label="Search by Name"
+        value={nameSearch}
+        onChange={(e) => setNameSearch(e.target.value)}
+      />
+      <ComponentInput
+        label="Status "
+        value={statusSearch}
+        onChange={(e) => setStatusSearch(e.target.value)}
+      />
+
       {currentPage > 1 && (
         <PagesButton
           next={false}
