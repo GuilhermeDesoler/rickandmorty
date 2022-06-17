@@ -4,6 +4,7 @@ export const InputContainer = styled.div`
   height: 75px;
   width: 50%;
   position: relative;
+  margin: 5px;
 
   label {
     display: flex;
@@ -28,7 +29,7 @@ export const InputContainer = styled.div`
 
     &:not(:placeholder-shown),
     &:focus {
-      border-color: theme.colors.primary.normal;
+      border-color: green;
       outline: none;
     }
   }

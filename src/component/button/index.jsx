@@ -1,17 +1,13 @@
 import { ButtonContainer, StyledButton } from "./styled.button";
-import {
-  BsFillArrowLeftCircleFill,
-  BsFillArrowRightCircleFill,
-} from "react-icons/bs";
 
-const PagesButton = ({ next, onclick }) => {
+const ComponentButton = ({ next, onclick, page }) => {
   return (
     <ButtonContainer>
       <StyledButton onClick={onclick}>
-        {next ? BsFillArrowRightCircleFill : BsFillArrowLeftCircleFill}
+        {next ? `Next Page` : `Preview Page`}
       </StyledButton>
     </ButtonContainer>
   );
 };
 
-export default PagesButton;
+export default ComponentButton;
